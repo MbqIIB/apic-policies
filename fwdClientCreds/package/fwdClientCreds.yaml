@@ -1,0 +1,37 @@
+policy: 1.0.0
+info:
+  title: Forward API Client Creds
+  name: fwdClientCreds
+  version: 1.0.0
+  description: Changes the client id/secret headers and saves the original headers.
+  contact:
+    name: Dor Serero
+    url: https://github.com/dorser
+    email: dorse@tangram-soft.co.il
+attach:
+  - rest
+  - soap
+properties:
+  $schema: "http://json-schema.org/draft-04/schema#"
+  type: object
+  properties:
+    origClientIdHeader:
+      label: Original Client Id Header
+      description: The header name used to save the original client Id.
+      type: string
+    origClientSecretHeader:
+      label: Original Client Secret Header
+      description: The header name used to save the original client Secret.
+      type: string
+    clientIdValue:
+      label: Client Id Value
+      description: The value of the client Id passed to the server.
+      type: string
+    clientSecretValue:
+      label: Client Secret Value
+      description: The value of the client Id passed to the server.
+      type: string
+  required:
+    - clientIdValue
+gateways:
+  - datapower-gateway
