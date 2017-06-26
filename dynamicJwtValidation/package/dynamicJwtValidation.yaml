@@ -1,0 +1,17 @@
+policy: 1.0.0
+info:
+  title: Dynamic JWT Validation
+  name: dynamicJwtValidation
+  version: 1.0.0
+  description: Validate JWT Token by Client ID
+  contact:
+    name: Dor Serero
+    url: https://github.com/dorser
+    email: dorse@tangram-soft.co.il
+attach:
+  - rest
+properties:
+  $schema: "http://json-schema.org/draft-04/schema#"
+  type: object
+gateways:
+  - datapower-gateway
