@@ -1,0 +1,25 @@
+policy: 1.0.0
+info:
+  title: Validate Querystring
+  name: validateQuerystring
+  version: 1.0.1
+  description: Validates the querystring against a given schema
+  contact:
+    name: Dor Serero
+    url: https://github.com/Tangram-Soft/apic-policies
+    email: dorse@tangram-soft.co.il
+attach:
+  - rest
+  - soap
+properties:
+  $schema: "http://json-schema.org/draft-04/schema#"
+  type: object
+  properties:
+    schemaLocation:
+      label: Definition
+      description: Specify an OpenAPI (Swagger) schema definition with which to validate the payload ('#/definitions/XXXX').
+      type: string
+  required:
+    - schemaLocation
+gateways:
+  - datapower-gateway
