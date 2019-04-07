@@ -1,0 +1,26 @@
+policy: 1.0.0
+info:
+  title: Badger to JSON
+  name: Badger-to-JSON
+  version: 1.0.0
+  description: The policy getting BadgerFish format and convert it to json format. The policy handle with objects and objects that contains arrays. the policy cleaning attributes (they won't show at the output json).
+  contact:
+    name: Saar Morag
+    email: saarmo@tangram-soft.co.il
+attach:
+  - rest
+  - soap
+properties:
+  $schema: "http://json-schema.org/draft-04/schema#"
+  type: object
+  properties:
+    Title:
+      label: Title
+      type: string
+      default: BadgerFish format to JSON format
+    description:
+      label: description
+      type: string
+
+gateways:
+  - datapower-gateway
